@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Great Number Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>Welcome to the Great Number Game!</h1>
+        <h3>I am thinking of a number between 1 and 100!</h3>
+        <h4>Please Take a Guess!</h4>
+        <p>{{session['text']}}</p>
+        <form action='/guess' method='POST'>
+            <input type='text' name='guess'></br>
+            <input type='submit' value='Submit'>
+        </form> 
+        <form action='/reset'>
+            <input type="submit" value="Reset">
+        </form>
+    </div>
+</body>
+</html>
